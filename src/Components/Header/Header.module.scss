@@ -1,0 +1,32 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 14px 100px;
+    z-index: 10;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);   
+    background-color: var(--white);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.navigate {
+    font-size: 1.6rem;
+
+    a {
+        margin-left: 50px;
+        text-decoration: none;
+        color: var(--black);
+    }
+
+    a:hover {
+        color: var(--primary);
+    }
+}
