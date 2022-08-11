@@ -1,0 +1,49 @@
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+    
+    .aboutImg img {
+        width: 400px;
+    }
+}
+
+.aboutContent {
+    padding: 16px;
+    margin-top: 50px;
+    h3 {
+        font-size: 2.4rem;
+        text-decoration: underline;
+    }
+
+    h4 {
+        font-size: 1.8rem;
+    }
+    .aboutChildTitle {
+        font-style: bold;
+        margin-top: 25px;
+    }
+
+    p {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
+
+    .getMore p {
+        margin-top: 25px;
+        text-align: justify;
+    }
+
+    .aboutEdu {
+        list-style: none;
+        .eduTime {
+            margin-top: 15px;
+            opacity: 0.5;
+        }
+        
+        .eduInfo {
+            margin-top: 10px;
+        }
+    }
+}
