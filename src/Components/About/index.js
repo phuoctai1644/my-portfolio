@@ -1,5 +1,5 @@
 import styles from './About.module.scss'
-import aboutImg from '../../assets/images/About - image.png'
+import aboutImg from '../../assets/images/About - image.svg'
 
 const EDU = [
     {

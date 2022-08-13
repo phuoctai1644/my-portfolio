@@ -19,7 +19,7 @@ function Header() {
 
     const navToHome = () => {
         resetStyle()
-        homeRef.current.href = '#'
+        homeRef.current.href = '#intro'
         homeRef.current.style.color = '#1363ff'
     }
 
@@ -53,10 +53,10 @@ function Header() {
 
     return (
         <div className={styles.wrapper}>
-            <div className={styles.logo}>
+            <a href="/" onClick={navToHome} className={styles.logo}>
                 <LogoIcon />
                 <h1>PhTai</h1>
-            </div>
+            </a>
             <div className={styles.navigate}>
                 <a href="/" onClick={navToHome} ref={homeRef}>Home</a>
                 <a href="/" onClick={navToAbout} ref={aboutRef}>About</a>

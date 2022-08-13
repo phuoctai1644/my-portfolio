@@ -21,9 +21,10 @@
     p {
         font-size: 1.6rem;
         margin-top: 20px;
+        letter-spacing: 2px;
     }
 
-    a {
+    & > a {
         display: inline-block;
         font-size: 1.6rem;
         padding: 16px 24px;
@@ -41,5 +42,19 @@
             background-color: #2c72fd;
             cursor: pointer;
         }
+    }
+}
+
+.introContact {
+    margin-top: 20px;
+    display: flex;
+    list-style: none;
+
+    li ~ li {
+        margin-left: 36px;
+    }
+
+    li:hover {
+        transform: scale(1.25);
     }
 }
