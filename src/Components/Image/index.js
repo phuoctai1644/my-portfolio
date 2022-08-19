@@ -1,6 +1,6 @@
-function Image({url, alt, width, height="100%"}) {
+function Image({url, alt, width}) {
     return (
-        <img src={url} alt={alt} width={width} height={height} />
+        <img src={url} alt={alt} width={width} />
     )
 }
 

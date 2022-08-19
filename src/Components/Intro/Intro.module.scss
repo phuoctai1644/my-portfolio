@@ -2,10 +2,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 100px;
     background-image: linear-gradient(to right, var(--background1), var(--background2));
     background-color: var(--background);
     margin-top: 88px;
+    padding: 0 100px;
 }
 
 .introContent {
@@ -49,6 +49,7 @@
     margin-top: 20px;
     display: flex;
     list-style: none;
+    padding: 0;
 
     li ~ li {
         margin-left: 36px;
@@ -56,5 +57,75 @@
 
     li:hover {
         transform: scale(1.25);
+    }
+}
+
+// Small PC and tablet (768px to 992px)
+@media screen and (max-width: 62em) and (min-width: 48em) {
+    .intro {
+        padding: 0 50px;
+    }
+    .introContent {
+        h3 {
+            font-size: 1.6rem;
+        }
+        h2 {
+            font-size: 3rem;
+        }
+        a, p {
+            font-size: 1.4rem;  
+        }
+    }
+
+    .introBanner {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+// Small Tablet (576px to 767px) and mobile
+@media screen and (max-width: 47.9375em) {
+    .introContent {
+        text-align: center;
+    }
+    .introContact {
+        justify-content: center;
+    }
+    .introBanner {
+        display: flex;
+        justify-content: center;
+    }
+    .introBanner {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+// Small Tablet (576px to 767px)
+@media screen and (min-width: 36em) and (max-width: 47.9375em) {
+    .intro {
+        padding: 50px 50px 0;
+    }
+}
+
+// Mobile phone 
+@media screen and (max-width: 35.9375em) {
+    .intro {
+        padding: 25px 0 0;
+        margin-top: 75px;
+    }
+
+    .introContent {
+        h3 {
+            font-size: 1.6rem;
+        }
+        h2 {
+            font-size: 3rem;
+        }
+        a, p {
+            font-size: 1.4rem;  
+        }
     }
 }

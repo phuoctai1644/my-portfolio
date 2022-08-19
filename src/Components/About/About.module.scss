@@ -5,13 +5,13 @@
     padding: 0 100px;
     
     .aboutImg {
-        width: 50%;
-    }
+        img {
+            width: 100%;
+        }
+    }  
 }
 
 .aboutContent {
-    width: 50%;
-    padding: 16px;
     margin-top: 16px;
     
     h3 {
@@ -33,7 +33,7 @@
     }
 
     .getMore p {
-        margin-top: 25px;
+        margin-top: 18px;
         text-align: justify;
     }
 
@@ -47,5 +47,38 @@
         .eduInfo {
             margin-top: 10px;
         }
+    }
+}
+
+// Small PC and tablet (768px to 992px)
+@media screen and (max-width: 62em) and (min-width: 48em) {
+    .about {
+        padding: 50px 50px 0;
+    }
+}
+
+// Small Tablet (576px to 767px) and mobile
+@media screen and (max-width: 47.9375em) {
+    .aboutImg {
+        display: none;
+    }
+    .aboutContent {
+        h3 {
+            text-align: center;
+        }
+    }
+}
+
+// Small Tablet (576px to 767px)
+@media screen and (min-width: 36em) and (max-width: 47.9375em) {
+    .about {
+        padding: 50px;
+    }
+}
+
+// Mobile phone 
+@media screen and (max-width: 35.9375em) {
+    .about {
+        padding: 50px 25px;
     }
 }

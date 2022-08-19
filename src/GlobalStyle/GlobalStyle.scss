@@ -1,9 +1,10 @@
 @import 'normalize.css';
+@import 'bootstrap/dist/css/bootstrap.min.css';
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
     --white: #fff;
-    --back: #000;
+    --black: #000;
     --background1: rgba(219, 238, 255, 0.8);
     --background2: rgba(145, 211, 255, 0.8);
     --primary: #1363ff;
@@ -20,6 +21,7 @@ html {
     font-size: 62.5%;
 }
 
+// Scrollbar CSS
 html *::-webkit-scrollbar {
     border-radius: 0;
     width: 8px;
@@ -27,7 +29,7 @@ html *::-webkit-scrollbar {
 
 html *::-webkit-scrollbar-thumb {
     border-radius: 4px;
-    background-color: rgba(0, 0, 0, .15);
+    background-color: rgba(0, 0, 0, 0.15);
 }
 
 html *::-webkit-scrollbar-track {
@@ -43,3 +45,14 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
+
+ul, h1, h2, h3, h4, h5 {
+    padding: 0;
+    margin: 0;
+}
+
+// @media screen and (max-width: 35.9375em) {
+//     html *::-webkit-scrollbar {
+//         width: 0;
+//     }
+// }

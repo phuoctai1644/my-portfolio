@@ -1,10 +1,17 @@
-.container {
+.wrapper {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     height: 100vh;
-    scroll-padding: 88px;
+    scroll-padding-top: 88px;
 }
 
 section {
     scroll-snap-align: start;
+}
+
+/* Mobile phone  */
+@media screen and (max-width: 35.9375em) {
+    .wrapper {
+        scroll-padding: 68px;
+    }
 }
