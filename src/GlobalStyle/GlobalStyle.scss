@@ -5,9 +5,13 @@
 :root {
     --white: #fff;
     --black: #000;
-    --background1: rgba(219, 238, 255, 0.8);
-    --background2: rgba(145, 211, 255, 0.8);
     --primary: #1363ff;
+
+    // Light mode
+    --text-color: #000;
+    --background-1: #fff;
+    --background-2-1: rgba(219, 238, 255, 0.8);
+    --background-2-2: rgba(145, 211, 255, 0.8);
 }
 
 * {
@@ -51,8 +55,9 @@ ul, h1, h2, h3, h4, h5 {
     margin: 0;
 }
 
-// @media screen and (max-width: 35.9375em) {
-//     html *::-webkit-scrollbar {
-//         width: 0;
-//     }
-// }
+.dark-mode {
+    --text-color: #ddd;
+    --background-1: #072026;
+    --background-2-1: #052831;
+    --background-2-2: #052831;
+}

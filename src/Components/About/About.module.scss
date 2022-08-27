@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 100px;
+    background-color: var(--background-1);
     
     .aboutImg {
         img {
@@ -13,6 +14,7 @@
 
 .aboutContent {
     margin-top: 16px;
+    color: var(--text-color);
     
     h3 {
         font-size: 2.4rem;

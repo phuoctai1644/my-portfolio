@@ -2,13 +2,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-image: linear-gradient(to right, var(--background1), var(--background2));
-    background-color: var(--background);
+    background-image: linear-gradient(to right, var(--background-2-1), var(--background-2-2));
     margin-top: 88px;
     padding: 0 100px;
 }
 
 .introContent {
+    color: var(--text-color);
     h3 {
         font-size: 1.8rem;
     }

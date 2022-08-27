@@ -1,7 +1,8 @@
 .contact {
     padding: 70px 0;
-    background-image: linear-gradient(to right, var(--background1), var(--background2));
+    background-image: linear-gradient(to right, var(--background-2-1), var(--background-2-2));
     font-size: 1.6rem;
+    color: var(--text-color);
 
     h3 {
         font-size: 2rem;
@@ -39,13 +40,16 @@
         width: 100%;
         padding: 12px;
         margin-bottom: 12px;
+        color: var(--text-color);
+        background-color: transparent;
+        border: 1px solid var(--text-color);
     }
 
     button {
         font-size: 1.6rem;
         width: 40%;
         background-color: var(--primary);
-        color: var(--white);
+        color: var(--text-color);
         outline: none;
         border: none;
         border-radius: 5px;

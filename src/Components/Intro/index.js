@@ -14,7 +14,7 @@ function Intro() {
                             <h2>Tran Phuoc Tai</h2>
                             <p>I love designing and building websites</p>
                             <ul className={styles.introContact}>
-                                <li><a href="https://github.com/phuoctai1644" target="__blank"><GitInfoIcon width="30" height="30"/></a></li>
+                                <li><a href="https://github.com/phuoctai1644" target="__blank"><GitInfoIcon width="30" height="30" /></a></li>
                                 <li><a href="https://www.facebook.com/tph.tai" target="__blank"><FacebookInfoIcon width="30" height="30"/></a></li>
                                 <li><a href="mailto:tranptai@gmail.com" target="__blank"><GmailInfoIcon width="30" height="30"/></a></li>
                             </ul>
