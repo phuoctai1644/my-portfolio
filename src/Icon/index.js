@@ -202,7 +202,7 @@ export const CloseIcon = ({width="24", height="24"}) => {
 
 export const MoonIcon = () => {
     return (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path 
                 fillRule="evenodd" 
                 clipRule="evenodd" 
@@ -215,7 +215,7 @@ export const MoonIcon = () => {
 
 export const SunIcon = () => {
     return (
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="12" cy="12" r="4" fill="#e9b949"/>
             <path d="M12 5V3" stroke="#e9b949" strokeWidth="2" strokeLinecap="round"/>
             <path d="M12 21V19" stroke="#e9b949" strokeWidth="2" strokeLinecap="round"/>

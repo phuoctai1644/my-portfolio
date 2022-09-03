@@ -34,11 +34,17 @@ function Contact() {
                     <Col lg={6} md={6} sm={12}>
                         <div className={styles.contactForm}>
                             <h3>Contact Form</h3>
-                            <form action="" className={styles.contactFormControl}>
-                                <input type="text" placeholder="Name:" required/>
-                                <input type="email" placeholder="Email: " required/>
-                                <input type="text" placeholder="Subject (Optional): " />
-                                <textarea name="" id="" cols="30" rows="10" placeholder="Message" required></textarea>
+                            <form 
+                                method="POST"
+                                action="https://formsubmit.co/tranptai@gmail.com"
+                                className={styles.contactFormControl}
+                            >
+                                <input type="text" name="name" placeholder="Name:" required/>
+                                <input type="email" name='email' placeholder="Email: " required/>
+                                <input type="text" name="subject" placeholder="Subject (Optional): " />
+                                <textarea name="message" cols="30" rows="10" placeholder="Message" required></textarea>
+
+                                <input type="hidden" name="_next" value="http://localhost:3000/thankU" />
 
                                 <button type="submit">SEND</button>
                             </form>
