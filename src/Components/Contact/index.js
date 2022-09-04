@@ -1,8 +1,17 @@
+import { useRef } from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import { ContactIcon, HomeIcon, LocationIcon, MessageIcon } from '../../Icon'
 import styles from './Contact.module.scss'
 
 function Contact() {
+    const formRef = useRef()
+
+    const handleSubmitContact = () => {
+        formRef.current.action = 'https://formsubmit.co/tranptai@gmail.com'
+        formRef.current.method = 'POST'
+        
+        alert('Thanks for sendding me an email! I will reply soon 😍')
+    }
     return (
         <div className={styles.contact} id="contact">
             <h2 className={styles.sectionTitle}>CONTACT</h2>
@@ -35,16 +44,14 @@ function Contact() {
                         <div className={styles.contactForm}>
                             <h3>Contact Form</h3>
                             <form 
-                                method="POST"
-                                action="https://formsubmit.co/tranptai@gmail.com"
+                                ref={formRef}
                                 className={styles.contactFormControl}
+                                onSubmit={handleSubmitContact}
                             >
                                 <input type="text" name="name" placeholder="Name:" required/>
                                 <input type="email" name='email' placeholder="Email: " required/>
                                 <input type="text" name="subject" placeholder="Subject (Optional): " />
                                 <textarea name="message" cols="30" rows="10" placeholder="Message" required></textarea>
-
-                                <input type="hidden" name="_next" value="http://localhost:3000/thankU" />
 
                                 <button type="submit">SEND</button>
                             </form>

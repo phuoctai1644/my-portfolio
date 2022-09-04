@@ -6,7 +6,7 @@ function Skill() {
         <div className={styles.skill} id="skill">
             <h2 className={styles.sectionTitle}>SKILLS</h2>
             <ul className={styles.skillList}>
-                <li><HTMLIcon /></li>
+                <li><HTMLIcon /></li>   
                 <li><CSSIcon /></li>
                 <li><JSIcon /></li>
                 <li><ReactJSIcon /></li>
