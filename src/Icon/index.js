@@ -181,7 +181,7 @@ export const GmailInfoIcon = ({width = "48", height = "48"}) => {
     )
 }
 
-export const MenuIcon = ({width="24", height="24", color="black"}) => {
+export const MenuIcon = ({width="24", height="24", color}) => {
     return (
         <svg width={width} height={height} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M5 7H19" stroke={color} strokeLinecap="round"/>
@@ -191,11 +191,11 @@ export const MenuIcon = ({width="24", height="24", color="black"}) => {
     )
 }
 
-export const CloseIcon = ({width="24", height="24"}) => {
+export const CloseIcon = ({width="24", height="24", color}) => {
     return (
         <svg width={width} height={height} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M18 6L6 18" stroke="black" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M6 6L18 18" stroke="black" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M18 6L6 18" stroke={color} strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M6 6L18 18" stroke={color} strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
     )
 }

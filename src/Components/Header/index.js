@@ -135,7 +135,7 @@ function Header({htmlRef}) {
                         
                         <ul className={styles.navList}>
                             <label htmlFor="nav-mobile-input" href="#" className={styles.navHeader}>
-                                <CloseIcon width="36" height="36" />
+                                <CloseIcon width="36" height="36" color={darkMode ? 'white' : 'black'} />
                             </label>
                             <li className={styles.navItem}>
                                 <a href="/" onClick={navToHome} ref={homeRef}>Home</a>
@@ -153,8 +153,6 @@ function Header({htmlRef}) {
                                 <a href="/" onClick={navToContact} ref={contactRef}>Contact</a>
                             </li>
                         </ul>
-
-                        
                     </Col>
 
                     <Col lg={2} md={2} sm={0}>
