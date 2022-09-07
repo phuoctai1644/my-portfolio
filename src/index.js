@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import App from './App';
 import GlobalStyle from './GlobalStyle';
 import reportWebVitals from './reportWebVitals';
@@ -8,7 +9,13 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <GlobalStyle>
-      <App />
+      <BrowserRouter>
+        <Routes>
+          <Route path='/my-portfolio' element={<App />} />
+          {/* <Route path='/' element={<App />} /> */}
+        </Routes>
+      </BrowserRouter>
+      {/* <App /> */}
     </GlobalStyle>
   </React.StrictMode>
 );

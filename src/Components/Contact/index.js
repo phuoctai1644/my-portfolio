@@ -53,6 +53,8 @@ function Contact() {
                                 <input type="text" name="subject" placeholder="Subject (Optional): " />
                                 <textarea name="message" cols="30" rows="10" placeholder="Message" required></textarea>
 
+                                <input type="hidden" name="_template" value="table" />
+                                <input type="hidden" name="_captcha" value="false"/>
                                 <button type="submit">SEND</button>
                             </form>
                         </div>
