@@ -1,5 +1,5 @@
 import { useRef } from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container, Row, Col, Button } from 'react-bootstrap'
 import { ContactIcon, HomeIcon, LocationIcon, MessageIcon } from '../../Icon'
 import styles from './Contact.module.scss'
 
@@ -55,7 +55,7 @@ function Contact() {
 
                                 <input type="hidden" name="_template" value="table" />
                                 <input type="hidden" name="_captcha" value="false"/>
-                                <button type="submit">SEND</button>
+                                <Button type='submit'>SEND</Button>
                             </form>
                         </div>
                     </Col>

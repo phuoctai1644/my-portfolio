@@ -1,5 +1,5 @@
 import styles from './Skill.module.scss'
-import {HTMLIcon, CSSIcon, JSIcon, ReactJSIcon, GitIcon, CppIcon} from '../../Icon'
+import {HTMLIcon, CSSIcon, JSIcon, ReactJSIcon, GitIcon, SCSSIcon, BootstrapIcon, TSIcon, AngularIcon, PythonIcon, DjangoIcon} from '../../Icon'
 
 function Skill() {
     return (
@@ -8,10 +8,15 @@ function Skill() {
             <ul className={styles.skillList}>
                 <li><HTMLIcon /></li>   
                 <li><CSSIcon /></li>
+                <li><SCSSIcon /></li>
+                <li><BootstrapIcon /></li>
                 <li><JSIcon /></li>
+                <li><TSIcon /></li>
                 <li><ReactJSIcon /></li>
+                <li><AngularIcon /></li>
+                <li><PythonIcon /></li>
+                <li><DjangoIcon /></li>
                 <li><GitIcon /></li>
-                <li><CppIcon /></li>
             </ul>
         </div>
     )
