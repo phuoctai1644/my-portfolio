@@ -20,6 +20,11 @@
             margin: 20px;
             box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
             border-radius: 15px;
+
+            &:hover {
+                transform: scale(1.25);
+                transition: transform .25s;
+            }
         }
     }
 }
@@ -52,7 +57,7 @@
 // Mobile phone 
 @media screen and (max-width: 35.9375em) {
     .skill {
-        padding: 50px 25px; 
+        padding: 50px 0; 
         
         .skillList {
             width: 100%;

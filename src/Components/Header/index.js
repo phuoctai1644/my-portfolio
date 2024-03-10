@@ -102,7 +102,7 @@ function Header({htmlRef}) {
                         <div className={styles.navMobileWrap}>
                             <a href="/" onClick={navToHome} className={styles.logo}>
                                 <LogoIcon />
-                                <h1>PhTai</h1>
+                                <h1 className="mt-3">PhTai</h1>
                             </a>
                             <div className={styles.mobileGroup}>
                                 <div className={styles.toggleTheme}>

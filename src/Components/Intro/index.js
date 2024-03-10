@@ -14,10 +14,26 @@ function Intro() {
                             <h2>Trần Phước Tài</h2>
                             <p>I love designing and building websites</p>
                             <ul className={styles.introContact}>
-                                <li><a href="mailto:tranptai@gmail.com" target="__blank"><GmailInfoIcon width="30" height="30"/></a></li>
-                                <li><a href="https://www.linkedin.com/in/phuoc-tai" target="__blank"><LinkedInIcon width="30" height="30"/></a></li>
-                                <li><a href="https://github.com/phuoctai1644" target="__blank"><GitInfoIcon width="30" height="30" /></a></li>
-                                <li><a href="https://www.facebook.com/tph.tai" target="__blank"><FacebookInfoIcon width="30" height="30"/></a></li>
+                                <li title='Gmail'>
+                                    <a href="mailto:tranptai@gmail.com" target="__blank">
+                                        <GmailInfoIcon width="30" height="30"/>
+                                    </a>
+                                </li>
+                                <li title='LinkedIn'>
+                                    <a href="https://www.linkedin.com/in/phuoc-tai" target="__blank">
+                                        <LinkedInIcon width="30" height="30"/>
+                                    </a>
+                                </li>
+                                <li title='GitHub'>
+                                    <a href="https://github.com/phuoctai1644" target="__blank">
+                                        <GitInfoIcon width="30" height="30" />
+                                    </a>
+                                </li>
+                                <li title='Facebook'>
+                                    <a href="https://www.facebook.com/tph.tai" target="__blank">
+                                        <FacebookInfoIcon width="30" height="30"/>
+                                    </a>
+                                </li>
                             </ul>
                             <Button href='#about' size='xlg' className={styles.customBtn + ' mt-5'}>DISCOVER NOW</Button>
                             {/* <a href="#about">DISCOVER NOW</a> */}
