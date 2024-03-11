@@ -1,6 +1,6 @@
 @import 'normalize.css';
 @import 'bootstrap/dist/css/bootstrap.min.css';
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
     --white: #fff;
@@ -43,7 +43,7 @@ html *::-webkit-scrollbar-track {
 
 body {
     font-size: 100%;
-    font-family: 'Inter', sans-serif;
+    font-family: "Epilogue", sans-serif;
     text-rendering: optimizeSpeed;
 	margin: 0 auto;
 	-webkit-font-smoothing: antialiased;

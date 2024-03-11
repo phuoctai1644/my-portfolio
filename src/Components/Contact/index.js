@@ -1,6 +1,6 @@
 import { useRef } from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
-import { ContactIcon, HomeIcon, LocationIcon, MessageIcon } from '../../Icon'
+import { Container, Row, Col, Button } from 'react-bootstrap'
+import { ContactIcon, LinkedInIcon, LocationIcon, MessageIcon } from '../../Icon'
 import styles from './Contact.module.scss'
 
 function Contact() {
@@ -23,25 +23,34 @@ function Contact() {
                             <ul className={styles.contactList}>
                                 <li>
                                     <LocationIcon />
-                                    <span>Address: Thu Duc, HCM, Vietnam</span>
+                                    <span className='mt-2'>Address: Thu Duc, HCM, Vietnam</span>
                                 </li>
                                 <li>
                                     <ContactIcon />
-                                    <span>Phone: +84 388 284 790</span>
+                                    <span className='mt-2'>
+                                        Phone:&nbsp;
+                                        <a href="tel:+84388284790">+84 388 284 790</a>
+                                    </span>
                                 </li>
                                 <li>
                                     <MessageIcon />
-                                    <span>Email: tranptai@gmail.com</span>
+                                    <span className='mt-2'>
+                                        Email:&nbsp;
+                                        <a href="mailto:tranptai@gmail.com" target='blank'>tranptai@gmail.com</a>
+                                    </span>
                                 </li>
                                 <li>
-                                    <HomeIcon />
-                                    <span>Website: phuoctai.github.com</span>
+                                    <LinkedInIcon width='24' height='24' color="#1363ff"/>
+                                    <span className='mt-2'>
+                                        LinkedIn:&nbsp;
+                                        <a href="https://www.linkedin.com/in/phuoc-tai/" target='blank'>linkedin.com/in/phuoc-tai/</a>
+                                    </span>
                                 </li>
                             </ul>
                         </div>
                     </Col>
                     <Col lg={6} md={6} sm={12}>
-                        <div className={styles.contactForm}>
+                        <div className="mt-4 mt-sm-0">
                             <h3>Contact Form</h3>
                             <form 
                                 ref={formRef}
@@ -55,7 +64,7 @@ function Contact() {
 
                                 <input type="hidden" name="_template" value="table" />
                                 <input type="hidden" name="_captcha" value="false"/>
-                                <button type="submit">SEND</button>
+                                <Button type='submit'>SEND</Button>
                             </form>
                         </div>
                     </Col>

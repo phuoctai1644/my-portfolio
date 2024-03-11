@@ -5,7 +5,7 @@ import aboutImg from '../../assets/images/About - image.svg'
 const EDU = [
     {
         start: 2019,
-        end: 'Present',
+        end: 2024,
         name: 'Bachelor of Computer Science',
         uni: 'Ho Chi Minh University of Technology (HCMUT)'
     },

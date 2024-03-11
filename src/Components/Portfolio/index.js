@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container, Row, Col, Button } from 'react-bootstrap'
 import styles from './Portfolio.module.scss'
 import todoDemo from '../../assets/gif/demo-todo.gif'
 import shopeeDemo from '../../assets/gif/demo-shopee.gif'
@@ -78,8 +78,8 @@ function Portfolio() {
                                             ))}
                                         </ul>
                                         <div className={styles.portfolioBtnGroup}>
-                                            {item.demo && <a href={item.demo} target="__blank">Demo</a>}
-                                            {item.source && <a href={item.source} target="__blank">Source</a>}
+                                            {item.demo && <Button size="lg" href={item.demo} target="__blank">Demo</Button>}
+                                            {item.source && <Button size="lg" href={item.source} target="__blank">Source</Button>}
                                         </div>
                                     </div>
                                 </Col>
@@ -88,8 +88,8 @@ function Portfolio() {
                     ))}
                 </ul>
             
-                <div className={styles.portfolioBtnGroup}>
-                    <a className="w-50 mx-auto my-5" href="https://github.com/phuoctai1644" target="__blank">More projects</a>
+                <div className={styles.portfolioBtnGroup} attr-type='main'>
+                    <Button class="my-5" size='lg' href="https://github.com/phuoctai1644" target="__blank">More Projects</Button>
                 </div>
             </Container>
         </div>
