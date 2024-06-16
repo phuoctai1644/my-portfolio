@@ -30,8 +30,8 @@ The app will run in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## Contact
-* Linkedin: [Trần Tài](www.linkedin.com/in/phuoc-tai)
+* Linkedin: <a href="www.linkedin.com/in/phuoc-tai" target="blank">Trần Tài</a>
 * Email: tranptai@gmail.com
-* Facebook: [Phước Tài](https://facebook.com/tph.tai)
+* Facebook: <a href="https://facebook.com/tph.tai" target="blank">Trần Tài</a>
 
 
