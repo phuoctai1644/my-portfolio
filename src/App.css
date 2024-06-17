@@ -9,6 +9,9 @@ section {
     scroll-snap-align: start;
 }
 
+.fs-14 { font-size: 1.4rem; }
+.fs-16 { font-size: 1.6rem; }
+
 /* Mobile phone  */
 @media screen and (max-width: 35.9375em) {
     .content {

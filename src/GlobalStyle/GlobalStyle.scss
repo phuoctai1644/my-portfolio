@@ -23,6 +23,7 @@
 
 html {
     font-size: 62.5%;
+    line-height: 1.6rem;
 }
 
 // Scrollbar CSS
@@ -42,7 +43,7 @@ html *::-webkit-scrollbar-track {
 }
 
 body {
-    font-size: 100%;
+    font-size: 1.6em;
     font-family: "Epilogue", sans-serif;
     text-rendering: optimizeSpeed;
 	margin: 0 auto;
