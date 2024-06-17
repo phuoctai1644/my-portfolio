@@ -110,7 +110,7 @@ function Header({htmlRef}) {
                                         type="checkbox" 
                                         className={styles.checkbox}
                                         id="checkbox-mb" 
-                                        value={darkMode}
+                                        value={darkMode ?? false}
                                         onChange={handleToggleTheme} 
                                     />
                                     <label htmlFor="checkbox-mb" className={styles.label}>
@@ -162,7 +162,7 @@ function Header({htmlRef}) {
                                 type="checkbox" 
                                 className={styles.checkbox} 
                                 id="checkbox" 
-                                value={darkMode}
+                                value={darkMode ?? false}
                                 onChange={handleToggleTheme} 
                             />
                             <label htmlFor="checkbox" className={styles.label}>
