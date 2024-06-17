@@ -76,7 +76,7 @@ function Portfolio() {
                 </ul>
             
                 <div className={styles.portfolioBtnGroup} attr-type='main'>
-                    <Button class="my-5" size='lg' href="https://github.com/phuoctai1644" target="__blank">More Projects</Button>
+                    <Button className="my-5" size='lg' href="https://github.com/phuoctai1644" target="__blank">More Projects</Button>
                 </div>
             </Container>
         </div>

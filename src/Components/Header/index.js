@@ -59,35 +59,41 @@ function Header({htmlRef}) {
         resetStyle()
         homeRef.current.href = '#intro'
         homeRef.current.style.color = '#1363ff'
-        hideMobileMenu()
+        hideMobileMenu();
+        goToSection('intro');
     }
 
     const navToAbout = () => {
         resetStyle()
-        aboutRef.current.href = '#about'
         aboutRef.current.style.color = '#1363ff'
-        hideMobileMenu()
+        hideMobileMenu();
+        goToSection('about')
     }
 
     const navToSkill = () => {
         resetStyle()
-        skillRef.current.href = '#skill'
         skillRef.current.style.color = '#1363ff'
-        hideMobileMenu()
+        hideMobileMenu();
+        goToSection('skill');
     }
 
     const navToPortfolio = () => {
         resetStyle()
-        portfolioRef.current.href = '#portfolio'
         portfolioRef.current.style.color = '#1363ff'
-        hideMobileMenu()
+        hideMobileMenu();
+        goToSection('portfolio');
     }
 
     const navToContact = () => {
         resetStyle()
-        contactRef.current.href = '#contact'
         contactRef.current.style.color = '#1363ff'
-        hideMobileMenu()
+        hideMobileMenu();
+        goToSection('contact');
+    }
+
+    const goToSection = (selector) => {
+        const contactSection = document.querySelector(`#${selector}`);
+        contactSection?.scrollIntoView({behavior: 'smooth'});
     }
 
     useEffect(() => {   
@@ -137,21 +143,11 @@ function Header({htmlRef}) {
                             <label htmlFor="nav-mobile-input" href="#" className={styles.navHeader}>
                                 <CloseIcon width="36" height="36" color={darkMode ? 'white' : 'black'} />
                             </label>
-                            <li className={styles.navItem}>
-                                <a href="/" onClick={navToHome} ref={homeRef}>Home</a>
-                            </li>
-                            <li className={styles.navItem}>
-                                <a href="/" onClick={navToAbout} ref={aboutRef}>About</a>
-                            </li>
-                            <li className={styles.navItem}>
-                                <a href="/" onClick={navToSkill} ref={skillRef}>Skill</a>
-                            </li>
-                            <li className={styles.navItem}>
-                                <a href="/" onClick={navToPortfolio} ref={portfolioRef}>Portfolio</a>
-                            </li>
-                            <li className={styles.navItem}>
-                                <a href="/" onClick={navToContact} ref={contactRef}>Contact</a>
-                            </li>
+                            <li className={styles.navItem} ref={homeRef} onClick={navToHome}> Home </li>
+                            <li className={styles.navItem} ref={aboutRef} onClick={navToAbout}> About </li>
+                            <li className={styles.navItem} ref={skillRef} onClick={navToSkill}> Skill </li>
+                            <li className={styles.navItem} ref={portfolioRef} onClick={navToPortfolio}> Portfolio </li>
+                            <li className={styles.navItem} ref={contactRef} onClick={navToContact}> Contact </li>
                         </ul>
                     </Col>
 

@@ -30,11 +30,16 @@
         display: none;
     }
 
-    a {
+    .navItem {
         display: inline-block;
         text-decoration: none;
         color: var(--text-color); 
         margin-left: 50px;
+
+        &:hover {
+            color: var(--primary);
+            cursor: pointer;
+        }
     }
 }
 

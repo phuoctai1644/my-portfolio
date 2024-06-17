@@ -82,16 +82,16 @@ function Contact() {
                                 className={styles.contactFormControl}
                                 onSubmit={handleSubmitContact}
                             >
-                                <input type="text" class="form-control" name="fromName" placeholder="Name" required />
-                                <input type="email" class="form-control" name="fromEmail" placeholder="Email " required/>
-                                <input type="text" class="form-control" name="subject" placeholder="Subject (Optional) " />
+                                <input type="text" className="form-control" name="fromName" placeholder="Name" required />
+                                <input type="email" className="form-control" name="fromEmail" placeholder="Email " required/>
+                                <input type="text" className="form-control" name="subject" placeholder="Subject (Optional) " />
                                 <textarea name="message" cols="30" rows="5" placeholder="Message" required></textarea>
 
                                 <Button type='submit' disabled={isSendingForm}>
                                     SEND
                                     {isSendingForm && (
-                                        <div class="spinner-border ms-2" role="status">
-                                            <span class="visually-hidden">Loading...</span>
+                                        <div className="spinner-border ms-2" role="status">
+                                            <span className="visually-hidden">Loading...</span>
                                         </div>
                                     )}
                                 </Button>
