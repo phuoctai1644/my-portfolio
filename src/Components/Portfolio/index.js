@@ -60,9 +60,15 @@ function Portfolio() {
                                         <h3 className={styles.portfolioName}>{item.title}</h3>
                                         <p className={styles.portfolioDesc}>{item.description}</p>
                                         <ul className={styles.portfolioTech}>
-                                            {item.technologies.map(tech => (
-                                                <li key={tech}>{tech}</li>
-                                            ))}
+                                            {item?.skills?.frontend && (
+                                                <li>Frontend: <strong>{item.skills.frontend.join(', ')}</strong></li>
+                                            )}
+                                            {item?.skills?.backend && (
+                                                <li>Backend: <strong>{item.skills.backend.join(', ')}</strong></li>
+                                            )}
+                                            {item?.skills?.database && (
+                                                <li>Database: <strong>{item.skills.database.join(', ')}</strong></li>
+                                            )}
                                         </ul>
                                         <div className={styles.portfolioBtnGroup}>
                                             {item.demo && <Button size="lg" href={item.link} target="__blank">Demo</Button>}
