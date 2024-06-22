@@ -34,18 +34,6 @@
       .period {
         min-width: 200px;
         position: relative;
-
-        &::after {
-          content: "";
-          display: block;
-          position: absolute;
-          top: 2px;
-          right: -9px;
-          width: 14px;
-          height: 14px;
-          background-color: var(--primary);
-          border-radius: 50%;
-        }
       }
 
       .detail {
@@ -66,9 +54,43 @@
           background-color: var(--primary);
         }
 
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 2px;
+          left: -5px;
+          width: 14px;
+          height: 14px;
+          background-color: var(--primary);
+          border-radius: 50%;
+        }
+
         .skills {
           margin-left: 20px;
         }
+      }
+    }
+  }
+}
+
+// Small PC and tablet (768px to 992px)
+@media screen and (width <= 62em) and (width >= 48em) {
+  .experience-wrapper {
+    .experience-list {
+      max-width: 70%;
+    }
+  }
+}
+
+// Small Tablet and mobile phone (less than 767px)
+@media screen and (width <= 47.9375em) {
+  .experience-wrapper {
+    .experience-list {
+      max-width: 90%;
+
+      .period {
+        display: none;
       }
     }
   }

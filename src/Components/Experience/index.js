@@ -21,11 +21,12 @@ function Experience() {
               }
             >
               <div className="period">
-                {moment(exp.startTime).format('MMM, YYYY')}
-                <span> - </span>
-                {exp?.endTime ? moment(exp.endTime).format('MMM, YYYY') : 'Current'}
+                <ExperiencePeriod exp={exp} />
               </div>
               <div className="detail">
+                <span className='mb-1 opacity-75 d-block d-sm-none'>
+                  <ExperiencePeriod exp={exp} />
+                </span>
                 <span className="fw-bold mb-1">{exp.title}</span>
                 <span className='mb-1'>{exp.company}</span>
                 <ul className='skills'>
@@ -54,6 +55,16 @@ function Experience() {
         </div>
       </Container>
     </div>
+  );
+}
+
+function ExperiencePeriod({exp}) {
+  return (
+    <span>
+      {moment(exp.startTime).format('MMM, YYYY')}
+      <span> - </span>
+      {exp?.endTime ? moment(exp.endTime).format('MMM, YYYY') : 'Current'}
+    </span>
   );
 }
 
