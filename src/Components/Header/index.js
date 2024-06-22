@@ -29,6 +29,7 @@ function Header({htmlRef}) {
     const homeRef = useRef()
     const aboutRef = useRef()
     const skillRef = useRef()
+    const experienceRef = useRef();
     const portfolioRef = useRef()
     const contactRef = useRef()
 
@@ -75,6 +76,13 @@ function Header({htmlRef}) {
         skillRef.current.style.color = '#1363ff'
         hideMobileMenu();
         goToSection('skill');
+    }
+
+    const navToExperience = () => {
+        resetStyle();
+        experienceRef.current.style.color = '#1363ff';
+        hideMobileMenu();
+        goToSection('experience');
     }
 
     const navToPortfolio = () => {
@@ -146,6 +154,7 @@ function Header({htmlRef}) {
                             <li className={styles.navItem} ref={homeRef} onClick={navToHome}> Home </li>
                             <li className={styles.navItem} ref={aboutRef} onClick={navToAbout}> About </li>
                             <li className={styles.navItem} ref={skillRef} onClick={navToSkill}> Skill </li>
+                            <li className={styles.navItem} ref={experienceRef} onClick={navToExperience}> Experience </li>
                             <li className={styles.navItem} ref={portfolioRef} onClick={navToPortfolio}> Portfolio </li>
                             <li className={styles.navItem} ref={contactRef} onClick={navToContact}> Contact </li>
                         </ul>

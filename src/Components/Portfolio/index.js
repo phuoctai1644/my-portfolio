@@ -1,15 +1,13 @@
-import { useEffect, useRef, useState } from 'react'
+import { useContext, useEffect, useRef } from 'react'
 import { Container, Row, Col, Button } from 'react-bootstrap'
 import styles from './Portfolio.module.scss'
 import Image from '../Image'
 
-/** Firestore */
-import { collection, query, getDocs } from 'firebase/firestore';
-import { db } from '../../firebase';
+import { AppContext } from '../../App';
 
 function Portfolio() {
     const reverseRef = useRef([])
-    const [portfolioes, setPortfolioes] = useState([]);
+    const portfolioes = useContext(AppContext).projects;
     
     useEffect(() => {
         for(let item of reverseRef.current) {
@@ -19,32 +17,12 @@ function Portfolio() {
         }
     }, [])
 
-    useEffect(() => {
-        /** Get projects from firestore */
-        getDocs(query(collection(db, 'projects')))
-            .then((querySnapshot) => {
-                const portfolioes = [];
-                querySnapshot.forEach(doc => { 
-                    const _document = doc.data();
-                    const createdAt = _document.createdAt;
-                    portfolioes.push({
-                        ..._document,
-                        createdAt: new Date(createdAt.seconds * 1000 + createdAt.nanoseconds / 1000000)
-                    });
-                });
-                setPortfolioes(portfolioes.sort((a, b) => b.createdAt - a.createdAt));
-            })
-            .catch(error => {
-                console.log("Error getting documents: ", error);
-            })
-    }, [])
-
     return (
         <div className={styles.portfolio} id="portfolio">
             <Container fluid="lg">
                 <h2 className={styles.sectionTitle}>PORTFOLIO</h2>
                 <ul className={styles.portfolioList}>
-                    {portfolioes.map((item, index) => (
+                    {portfolioes?.map((item, index) => (
                         <li 
                             key={index} 
                             className={styles.portfolioItem} 
