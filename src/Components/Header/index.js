@@ -106,7 +106,7 @@ function Header({htmlRef}) {
                 <Row className="align-items-center justify-content-between">
                     <Col lg={2} md={2} sm={12} xs={2}>
                         <div className={styles.navMobileWrap}>
-                            <a href="/" onClick={navToHome} className={styles.logo}>
+                            <a onClick={navToHome} className={styles.logo}>
                                 <LogoIcon />
                                 <h1 className="mt-3">PhTai</h1>
                             </a>
