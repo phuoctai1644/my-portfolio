@@ -8,21 +8,11 @@ function Header({htmlRef}) {
 
     useEffect(() => {
         if (darkMode) {
-            // Toggle on PC
-            ballThemePCRef.current.style.right = '2px'
-            ballThemePCRef.current.style.left = null
-
-            // // Toggle on mobile
-            ballThemeMbRef.current.style.right = '2px'
-            ballThemeMbRef.current.style.left = null
+            ballThemePCRef.current.style.transform = 'translateX(100%)';
+            ballThemeMbRef.current.style.transform = 'translateX(100%)';
         } else {
-            // Toggle on PC
-            ballThemePCRef.current.style.right = null
-            ballThemePCRef.current.style.left = '2px'
-
-            // Toggle on mobile
-            ballThemeMbRef.current.style.right = null
-            ballThemeMbRef.current.style.left = '2px'
+            ballThemePCRef.current.style.transform = 'translateX(-2px)';
+            ballThemeMbRef.current.style.transform = 'translateX(-2px)';
         }
     }, [darkMode])
 
