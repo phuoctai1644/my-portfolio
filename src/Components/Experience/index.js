@@ -3,14 +3,20 @@ import { Container } from 'react-bootstrap';
 import { AppContext } from '../../App';
 import * as moment from 'moment';
 import './index.scss';
+import { ExperienceFormat, ExperienceTime } from '../../helpers/experience';
 
 function Experience() {
   const { experiences } = useContext(AppContext);
 
+  const getYOE = exp => {
+    const expTime = new ExperienceTime(exp.startTime, exp.endTime);
+    return expTime.toString(ExperienceFormat.YEAR_AND_MONTH);
+  }
+
   return (
     <div className='experience-wrapper' id='experience'>
       <Container fluid="lg">
-        <h2 className='section-title'>EXPERIENCE</h2>
+        <h2 className='section-title'>EXPERIENCES</h2>
         <div className="experience-list">
         {experiences?.map((exp, index) => (
             <div key={index}
@@ -27,7 +33,10 @@ function Experience() {
                 <span className='mb-1 opacity-75 d-block d-sm-none'>
                   <ExperiencePeriod exp={exp} />
                 </span>
-                <span className="fw-bold mb-1">{exp.title}</span>
+                <span>
+                  <span className="fw-bold mb-1">{exp.title}</span>
+                  <span> ({getYOE(exp)})</span>
+                </span>
                 <span className='mb-1'>{exp.company}</span>
                 <ul className='skills'>
                   {exp?.skills?.frontend && (

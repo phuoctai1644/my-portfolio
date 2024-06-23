@@ -47,7 +47,8 @@ function Header({htmlRef}) {
     const resetStyle = () => {
         homeRef.current.style.color = "var(--text-color)"
         aboutRef.current.style.color = "var(--text-color)"
-        skillRef.current.style.color = "var(--text-color)"
+        // skillRef.current.style.color = "var(--text-color)"
+        experienceRef.current.style.color = "var(--text-color)"
         portfolioRef.current.style.color = "var(--text-color)"
         contactRef.current.style.color = "var(--text-color)"
     }
@@ -73,7 +74,7 @@ function Header({htmlRef}) {
 
     const navToSkill = () => {
         resetStyle()
-        skillRef.current.style.color = '#1363ff'
+        // skillRef.current.style.color = '#1363ff'
         hideMobileMenu();
         goToSection('skill');
     }
@@ -153,7 +154,7 @@ function Header({htmlRef}) {
                             </label>
                             <li className={styles.navItem} ref={homeRef} onClick={navToHome}> Home </li>
                             <li className={styles.navItem} ref={aboutRef} onClick={navToAbout}> About </li>
-                            <li className={styles.navItem} ref={skillRef} onClick={navToSkill}> Skill </li>
+                            {/* <li className={styles.navItem} ref={skillRef} onClick={navToSkill}> Skill </li> */}
                             <li className={styles.navItem} ref={experienceRef} onClick={navToExperience}> Experience </li>
                             <li className={styles.navItem} ref={portfolioRef} onClick={navToPortfolio}> Portfolio </li>
                             <li className={styles.navItem} ref={contactRef} onClick={navToContact}> Contact </li>
