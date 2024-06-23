@@ -1,6 +1,8 @@
 import { Container, Row, Col} from 'react-bootstrap'
 import styles from './About.module.scss'
 import aboutImg from '../../assets/images/About - image.svg'
+import { useContext, useEffect, useState } from 'react'
+import { AppContext } from '../../App'
 
 const EDU = [
     {
@@ -12,8 +14,17 @@ const EDU = [
 ]
 
 function About() {
-    const getYOE = start => {
-        const startDate = new Date(start);
+    const { experiences } = useContext(AppContext);
+    const [YOE, setYOE] = useState('');
+
+    useEffect(() => {
+        if (experiences) {
+            setYOE(getYOE())
+        }
+    }, [experiences]);
+
+    const getYOE = () => {
+        const startDate = new Date(experiences[experiences.length - 1].startTime);
         if (!startDate) {
             throw new Error("Invalid start date. Please provide a valid Date object.");
         }
@@ -51,7 +62,7 @@ function About() {
                             <h3>ABOUT ME</h3>
                             <div className={styles.getMore}>
                                 <h4 className={styles.aboutChildTitle}>Get to know me!</h4>
-                                <p>I'm Phuoc Tai, I'm a Frontend Engineer with <strong>{getYOE('06-01-2022')} years </strong>
+                                <p>I'm Phuoc Tai, I'm a Frontend Engineer with <strong>{YOE} years </strong>
                                 of experience building web applications. While my initial focus was on <strong>ReactJS</strong>, 
                                 I've quickly adapted and excelled in using <strong>Angular</strong> in my current role.
                                 This experience has fostered my ability to learn new frameworks and technologies efficiently.</p>

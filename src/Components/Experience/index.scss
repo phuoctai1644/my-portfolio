@@ -1,0 +1,97 @@
+.experience-wrapper {
+  padding: 70px 0;
+  background-color: var(--background-1);
+  color: var(--text-color);
+
+  .section-title {
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-decoration: underline;
+    text-align: center;
+    margin-bottom: 36px;
+  }
+
+  .experience-list {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    margin: auto;
+
+    .experience {
+      display: flex;
+
+      &.first .detail::before {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+
+      &.last .detail::before {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+
+      .period {
+        min-width: 200px;
+        position: relative;
+      }
+
+      .detail {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding-left: 30px;
+        padding-bottom: 25px;
+
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100%;
+          width: 4px;
+          background-color: var(--primary);
+        }
+
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 2px;
+          left: -5px;
+          width: 14px;
+          height: 14px;
+          background-color: var(--primary);
+          border-radius: 50%;
+        }
+
+        .skills {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+}
+
+// Small PC and tablet (768px to 992px)
+@media screen and (width <= 62em) and (width >= 48em) {
+  .experience-wrapper {
+    .experience-list {
+      max-width: 70%;
+    }
+  }
+}
+
+// Small Tablet and mobile phone (less than 767px)
+@media screen and (width <= 47.9375em) {
+  .experience-wrapper {
+    .experience-list {
+      max-width: 90%;
+
+      .period {
+        display: none;
+      }
+    }
+  }
+}
