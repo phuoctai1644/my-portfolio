@@ -21,8 +21,8 @@ function About() {
 
     useEffect(() => {
         if (experiences) {
-            const expTime = new ExperienceTime(experiences[experiences.length - 1].startTime)
-            setYOE(expTime.toString())
+            const totalTime = experiences.reduce((acc, exp) => acc + +(new ExperienceTime(exp.startTime, exp.endTime).YOE), 0);
+            setYOE(ExperienceTime.toApproximatelyYOE(null, null, totalTime));
         }
     }, [experiences]);
 

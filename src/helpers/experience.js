@@ -39,22 +39,27 @@ export class ExperienceTime {
     let monthString = '';
     
     if (evenValue) {
-      yearString = `${evenValue} year${evenValue > 1 ? 's' : ''}`;
+      yearString = `${evenValue} yr${evenValue > 1 ? 's' : ''}`;
     }
 
     if (oddValue) {
       const month = Math.ceil(oddValue * 12);
-      monthString = `${month} month${month > 1 ? 's' : ''}`;
+      monthString = `${month} mo${month > 1 ? 's' : ''}`;
     }
 
     return `${yearString} ${yearString && monthString ? 'and ' : ''} ${monthString}`;
   }
 
-  static toApproximatelyYOE(evenValue, oddValue) {
-    if (oddValue >= 0.25) {
-      return `nearly ${evenValue + 0.5}`;
-    } else if (oddValue >= 0.75) {
+  static toApproximatelyYOE(evenValue, oddValue, rawYOE = null) {
+    if (rawYOE) {
+      evenValue = Math.floor(rawYOE);
+      oddValue = Number(rawYOE - evenValue).toFixed(2);
+    }
+
+    if (+oddValue >= 0.75) {
       return `nearly ${evenValue + 1}`;
+    } else if (oddValue >= 0.25) {
+      return `nearly ${evenValue + 0.5}`;
     }
     return evenValue;
   }

@@ -35,7 +35,7 @@ function Experience() {
                 </span>
                 <span>
                   <span className="fw-bold mb-1">{exp.title}</span>
-                  <span> ({getYOE(exp)})</span>
+                  <span className='opacity-50'> ({getYOE(exp)})</span>
                 </span>
                 <span className='mb-1'>{exp.company}</span>
                 <ul className='skills'>
