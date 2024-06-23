@@ -8,21 +8,11 @@ function Header({htmlRef}) {
 
     useEffect(() => {
         if (darkMode) {
-            // Toggle on PC
-            ballThemePCRef.current.style.right = '2px'
-            ballThemePCRef.current.style.left = null
-
-            // // Toggle on mobile
-            ballThemeMbRef.current.style.right = '2px'
-            ballThemeMbRef.current.style.left = null
+            ballThemePCRef.current.style.transform = 'translateX(100%)';
+            ballThemeMbRef.current.style.transform = 'translateX(100%)';
         } else {
-            // Toggle on PC
-            ballThemePCRef.current.style.right = null
-            ballThemePCRef.current.style.left = '2px'
-
-            // Toggle on mobile
-            ballThemeMbRef.current.style.right = null
-            ballThemeMbRef.current.style.left = '2px'
+            ballThemePCRef.current.style.transform = 'translateX(-2px)';
+            ballThemeMbRef.current.style.transform = 'translateX(-2px)';
         }
     }, [darkMode])
 
@@ -47,7 +37,8 @@ function Header({htmlRef}) {
     const resetStyle = () => {
         homeRef.current.style.color = "var(--text-color)"
         aboutRef.current.style.color = "var(--text-color)"
-        skillRef.current.style.color = "var(--text-color)"
+        // skillRef.current.style.color = "var(--text-color)"
+        experienceRef.current.style.color = "var(--text-color)"
         portfolioRef.current.style.color = "var(--text-color)"
         contactRef.current.style.color = "var(--text-color)"
     }
@@ -73,7 +64,7 @@ function Header({htmlRef}) {
 
     const navToSkill = () => {
         resetStyle()
-        skillRef.current.style.color = '#1363ff'
+        // skillRef.current.style.color = '#1363ff'
         hideMobileMenu();
         goToSection('skill');
     }
@@ -153,7 +144,7 @@ function Header({htmlRef}) {
                             </label>
                             <li className={styles.navItem} ref={homeRef} onClick={navToHome}> Home </li>
                             <li className={styles.navItem} ref={aboutRef} onClick={navToAbout}> About </li>
-                            <li className={styles.navItem} ref={skillRef} onClick={navToSkill}> Skill </li>
+                            {/* <li className={styles.navItem} ref={skillRef} onClick={navToSkill}> Skill </li> */}
                             <li className={styles.navItem} ref={experienceRef} onClick={navToExperience}> Experience </li>
                             <li className={styles.navItem} ref={portfolioRef} onClick={navToPortfolio}> Portfolio </li>
                             <li className={styles.navItem} ref={contactRef} onClick={navToContact}> Contact </li>
