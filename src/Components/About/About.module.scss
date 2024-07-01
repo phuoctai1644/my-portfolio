@@ -56,11 +56,10 @@
         padding-left: 16px;
         .skillTypeGroup {
             display: flex;
-            align-items: center;
             margin-top: 15px;
 
             &:first-child {
-                margin-top: 10px;
+                margin-top: 15px;
             }
 
             .skillTitle {
@@ -71,8 +70,10 @@
 
             .skillList {
                 display: flex;
+                flex-wrap: wrap;
                 align-items: center;
                 column-gap: 10px;
+                row-gap: 10px;
                 margin-left: 15px;
                 
                 .skillItem {
