@@ -55,7 +55,7 @@ function Portfolio() {
                 </Row>
             
                 <div className={styles.portfolioBtnGroup}>
-                    <Button className="my-5" size='lg' href="https://github.com/phuoctai1644" target="_blank">More Projects</Button>
+                    <Button className={styles.btn} size='lg' href="https://github.com/phuoctai1644" target="_blank">More Projects</Button>
                 </div>
             </Container>
         </div>

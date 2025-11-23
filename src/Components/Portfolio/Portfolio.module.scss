@@ -148,19 +148,26 @@
 
 .portfolioBtnGroup {
     display: flex;
-    justify-content: space-around;
-    margin-top: 12px;
+    justify-content: center;
+    margin-top: 40px;
 
-    a {
-        padding: 12px 18px;
-        text-align: center;
-        min-width: 200px;
-        text-decoration: none;
-        border-radius: 5px;
+    .btn {
+        background-color: var(--primary-color);
+        border: none;
+        color: var(--text-light);
+        font-weight: 600;
+        padding: 12px 32px;
+        border-radius: 8px;
         font-size: 1.6rem;
-    }
-    &[attr-type='main'] {
-        margin-top: 36px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        
+        &:hover {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 71, 171, 0.4);
+        }
     }
 }
 
