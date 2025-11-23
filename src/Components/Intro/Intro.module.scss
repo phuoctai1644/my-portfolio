@@ -2,74 +2,193 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-image: linear-gradient(to right, var(--background-2-1), var(--background-2-2));
+    background-color: var(--secondary-color);
     margin-top: 88px;
-    padding: 0 100px;
+    padding: 80px 100px;
+    position: relative;
+    overflow: hidden;
+    
+    // Geometric pattern overlay
+    &::before {
+        content: "";
+        position: absolute;
+        top: -50px;
+        right: -50px;
+        width: 200px;
+        height: 200px;
+        background: var(--primary-color);
+        opacity: 0.1;
+        transform: rotate(45deg);
+        border-radius: 20px;
+    }
+    
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -30px;
+        left: -30px;
+        width: 100px;
+        height: 100px;
+        background: var(--primary-color);
+        opacity: 0.15;
+        border-radius: 50%;
+    }
 }
 
 .introContent {
-    color: var(--text-color);
+    color: var(--text-dark);
     letter-spacing: 1px;
+    position: relative;
+    z-index: 1;
+    
     span {
-        font-size: 1.8rem;
-        font-weight: 600;
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: var(--text-dark);
+        font-family: var(--main-font);
+        opacity: 0.8;
     }
 
     h2 {
-        font-size: 5rem;
-        font-weight: 700;
+        font-size: 4rem;
+        font-weight: 800;
+        font-family: var(--main-font);
         text-transform: uppercase;
-        margin-top: 30px;
+        color: var(--primary-color);
+        margin-top: 20px;
+        line-height: 1.1;
+        letter-spacing: 2px;
     }
 
     p {
-        font-size: 1.6rem;
-        margin-top: 20px;
-        color: #8D8D8D;
+        font-size: 1.8rem;
+        margin-top: 25px;
+        color: var(--text-dark);
+        line-height: 1.6;
+        font-weight: 400;
     }
 
     .customBtn {
-        padding: 14px 32px;
+        background-color: var(--primary-color);
+        border: none;
+        border-radius: 8px;
+        padding: 16px 32px;
         font-size: 1.6rem;
+        font-weight: 700;
         letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--text-light);
+        box-shadow: 0 4px 15px rgba(0, 71, 171, 0.3);
+        transition: all 0.3s ease;
+        
+        &:hover {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 71, 171, 0.4);
+        }
     }
 }
 
 .introContact {
-    margin-top: 20px;
+    margin-top: 30px;
     display: flex;
     list-style: none;
     padding: 0;
+    gap: 20px;
+    align-items: center;
 
-    li ~ li {
-        margin-left: 20px;
+    li {
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: rgba(0, 71, 171, 0.1);
+            transition: all 0.3s ease;
+            
+            &:hover {
+                background-color: var(--primary-color);
+                transform: translateY(-3px);
+                
+                svg {
+                    fill: var(--text-light);
+                }
+            }
+        }
     }
+}
 
-    li:hover {
-        transform: scale(1.25);
+.introBanner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    img {
+        width: 85%;
+        height: auto;
+        border-radius: 20px;
+        border: 5px solid var(--primary-color);
+        box-shadow: 0 8px 25px rgba(0, 71, 171, 0.2);
+        position: relative;
+        z-index: 1;
+    }
+    
+    // Geometric background decoration
+    &::before {
+        content: "";
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 80%;
+        height: 80%;
+        background: radial-gradient(circle, var(--secondary-color) 30%, var(--primary-color) 70%);
+        opacity: 0.1;
+        border-radius: 50%;
+        z-index: 0;
+    }
+    
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -20px;
+        left: -20px;
+        width: 60px;
+        height: 60px;
+        background: var(--accent-color);
+        border-radius: 50%;
+        opacity: 0.8;
+        z-index: 0;
     }
 }
 
 // Small PC and tablet (768px to 992px)
 @media screen and (max-width: 62em) and (min-width: 48em) {
     .intro {
-        padding: 0 50px;
+        padding: 60px 50px;
     }
     .introContent {
-        h3 {
-            font-size: 1.6rem;
+        span {
+            font-size: 1.4rem;
         }
         h2 {
-            font-size: 3rem;
+            font-size: 3.5rem;
         }
-        a, p {
-            font-size: 1.4rem;  
+        p {
+            font-size: 1.6rem;  
+        }
+        .customBtn {
+            font-size: 1.4rem;
+            padding: 14px 28px;
         }
     }
 
     .introBanner {
         img {
-            width: 100%;
+            width: 90%;
         }
     }
 }
@@ -78,6 +197,14 @@
 @media screen and (max-width: 47.9375em) {
     .introContent {
         text-align: center;
+        
+        h2 {
+            font-size: 3rem;
+        }
+        
+        p {
+            font-size: 1.6rem;
+        }
     }
     .introContact {
         justify-content: center;
@@ -85,10 +212,10 @@
     .introBanner {
         display: flex;
         justify-content: center;
-    }
-    .introBanner {
+        margin-top: 40px;
+        
         img {
-            width: 100%;
+            width: 80%;
         }
     }
 }
@@ -96,26 +223,46 @@
 // Small Tablet (576px to 767px)
 @media screen and (min-width: 36em) and (max-width: 47.9375em) {
     .intro {
-        padding: 50px 50px 0;
+        padding: 60px 50px;
     }
 }
 
 // Mobile phone 
 @media screen and (max-width: 35.9375em) {
     .intro {
-        padding: 25px 0 0;
+        padding: 40px 20px;
         margin-top: 75px;
+        
+        &::before, &::after {
+            display: none; // Hide geometric elements on mobile for cleaner look
+        }
     }
 
     .introContent {
-        h3 {
-            font-size: 1.6rem;
+        span {
+            font-size: 1.4rem;
         }
         h2 {
-            font-size: 3rem;
+            font-size: 2.8rem;
+            line-height: 1.2;
         }
-        a, p {
-            font-size: 1.4rem;  
+        p {
+            font-size: 1.5rem;  
+        }
+        .customBtn {
+            font-size: 1.4rem;
+            padding: 12px 24px;
+            width: 100%;
+        }
+    }
+    
+    .introBanner {
+        &::before {
+            display: none;
+        }
+        
+        img {
+            width: 90%;
         }
     }
 }

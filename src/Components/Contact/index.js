@@ -39,7 +39,7 @@ function Contact() {
 
     return (
         <div className={styles.contact} id="contact">
-            <h2 className={styles.sectionTitle}>CONTACT</h2>
+            <h2 className={styles.sectionTitle}>LET'S COLLABORATE!</h2>
             <Container fluid="lg">
                 <Row>
                     <Col lg={6} md={6} sm={12}>
