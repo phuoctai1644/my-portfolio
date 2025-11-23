@@ -10,9 +10,9 @@ function Intro() {
                 <Row className="align-items-center justify-content-center">
                     <Col lg={6} md={6} sm={12} xs={12}>
                         <div className={styles.introContent}>
-                            <span>THIS IS ME</span>
-                            <h2>Trần Phước Tài</h2>
-                            <p>I love designing and building websites</p>
+                            <span>HELLO! I'M</span>
+                            <h2 style={{ fontFamily: '"Epilogue", sans-serif' }}>Trần Phước Tài</h2>
+                            <p>I love designing and building modern, responsive websites that create amazing user experiences</p>
                             <ul className={styles.introContact}>
                                 <li title='Gmail'>
                                     <a href="mailto:tranptai@gmail.com" target="__blank">

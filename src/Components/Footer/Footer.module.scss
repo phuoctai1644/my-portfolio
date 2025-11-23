@@ -1,29 +1,137 @@
 .footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.6rem;
-    padding: 40px 0;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-blue) 100%);
+    padding: 80px 0 60px;
+    text-align: center;
+    color: var(--text-light);
+    position: relative;
+    overflow: hidden;
+    
+    // City background effect (subtle overlay)
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200"><path d="M0,200h100v-80h50v-40h50v60h100v-120h50v80h100v-100h50v120h100v-60h50v40h100v-80h50v60h100v-40h50v80h100v-100h50v140h100z" fill="rgba(255,255,255,0.05)"/></svg>') repeat-x bottom;
+        background-size: 1200px 200px;
+        pointer-events: none;
+    }
+}
+
+.ctaContent {
+    position: relative;
+    z-index: 1;
+}
+
+.ctaTitle {
+    font-size: 4.5rem;
+    font-weight: 800;
+    font-family: var(--main-font);
+    color: var(--accent-color);
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.ctaSubtitle {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: var(--text-light);
+    opacity: 0.9;
+}
+
+.contactInfo {
+    margin-bottom: 40px;
+    
+    .email, .phone {
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin: 8px 0;
+        color: var(--text-light);
+    }
 }
 
 .footerContact {
     display: flex;
+    justify-content: center;
     list-style-type: none;
-    margin: 12px 0 24px;
+    margin: 30px 0 40px;
+    gap: 30px;
     
-    li ~ li {
-        margin-left: 24px;
+    li {
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            
+            &:hover {
+                background-color: var(--accent-color);
+                transform: translateY(-4px);
+                
+                svg {
+                    fill: var(--primary-color);
+                }
+            }
+        }
     }
+}
 
-    li:hover {
-        transform: scale(1.1);
+.footerName {
+    font-size: 1.6rem;
+    font-weight: 300;
+    font-family: var(--main-font);
+    color: var(--text-light);
+    opacity: 0.7;
+    letter-spacing: 2px;
+    margin-top: 20px;
+}
+
+// Tablet and smaller screens
+@media screen and (max-width: 62em) {
+    .ctaTitle {
+        font-size: 3.5rem;
+    }
+    
+    .ctaSubtitle {
+        font-size: 1.8rem;
     }
 }
 
 // Mobile phone 
-@media screen and (max-width: 35.9375em)  {
+@media screen and (max-width: 35.9375em) {
     .footer {
-        font-size: 1.4rem;
+        padding: 60px 20px 40px;
+    }
+    
+    .ctaTitle {
+        font-size: 2.8rem;
+        letter-spacing: 2px;
+    }
+    
+    .ctaSubtitle {
+        font-size: 1.6rem;
+    }
+    
+    .contactInfo {
+        .email, .phone {
+            font-size: 1.6rem;
+        }
+    }
+    
+    .footerContact {
+        gap: 20px;
+        
+        li a {
+            width: 40px;
+            height: 40px;
+        }
     }
 }

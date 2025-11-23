@@ -1,29 +1,69 @@
 .skill {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 80px 100px 70px 100px;
-    background-image: linear-gradient(to right, var(--background-2-1), var(--background-2-2));
+    padding: 80px 0;
+    background-color: var(--text-light);
 
-    .skillList {
+    .skillCard {
+        background-color: var(--primary-color);
+        color: var(--text-light);
+        padding: 40px 30px;
+        border-radius: 16px;
+        text-align: center;
+        margin: 20px;
+        box-shadow: 0 8px 24px rgba(0, 71, 171, 0.15);
+        transition: all 0.3s ease;
+        height: 100%;
+        
+        &:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 32px rgba(0, 71, 171, 0.25);
+        }
+    }
+    
+    .skillIcon {
+        font-size: 4rem;
+        margin-bottom: 20px;
+        display: block;
+    }
+    
+    .skillTitle {
+        font-size: 2rem;
+        font-weight: 700;
+        font-family: var(--main-font);
+        margin-bottom: 15px;
+        letter-spacing: 1px;
+    }
+    
+    .skillDescription {
+        font-size: 1.4rem;
+        line-height: 1.6;
+        opacity: 0.9;
+        margin-bottom: 20px;
+    }
+    
+    .skillTechs {
         display: flex;
-        justify-content: center;
         flex-wrap: wrap;
-        list-style-type: none;
-        width: 690px;
-        margin-top: 20px;
-
-        li {
-            width: 75px;
-            height: 75px;
-            margin: 20px;
-            box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
-            border-radius: 15px;
-
+        gap: 12px;
+        justify-content: center;
+        
+        .techIcon {
+            width: 35px;
+            height: 35px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            
             &:hover {
-                transform: scale(1.25);
-                transition: transform .25s;
+                background-color: var(--accent-color);
+                transform: scale(1.1);
+            }
+            
+            svg {
+                width: 20px;
+                height: 20px;
             }
         }
     }
@@ -31,11 +71,12 @@
 
 .sectionTitle {
     font-size: 3rem;
-    font-weight: 600;
+    font-weight: 700;
+    font-family: var(--main-font);
     letter-spacing: 2px;
-    text-decoration: underline;
-    margin: auto;
-    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--primary-color);
 }
 
 // Small Tablet (576px to 767px)

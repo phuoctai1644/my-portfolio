@@ -4,10 +4,12 @@
     left: 0;
     right: 0;
     font-size: 1.8rem;
+    font-family: var(--main-font);
+    font-weight: 600;
     padding: 14px 100px;
     z-index: 1;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    background-color: var(--background-1);
+    background-color: var(--text-light);
 }
 
 .logo {
@@ -16,9 +18,26 @@
     justify-content: flex-start;
     text-decoration: none;
     cursor: pointer;
+    flex-direction: column;
+    position: relative;
 
     h1 {
-        color: var(--text-color);
+        color: var(--primary-color);
+        font-family: var(--main-font);
+        font-weight: 700;
+        font-size: 2.4rem;
+        margin: 0;
+        letter-spacing: 2px;
+        margin-top: 8px;
+    }
+    
+    &::after {
+        content: "@PHTAI";
+        font-size: 1.2rem;
+        color: var(--light-gray);
+        font-weight: 400;
+        letter-spacing: 1px;
+        margin-top: 2px;
     }
 }
 

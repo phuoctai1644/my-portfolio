@@ -40,17 +40,17 @@ function About() {
                             <h3>ABOUT ME</h3>
                             <div className={styles.getMore}>
                                 <h4 className={styles.aboutChildTitle}>Get to know me!</h4>
-                                <p>I'm Phuoc Tai, I'm a Frontend Engineer with <strong>{YOE} years </strong>
-                                of experience building web applications. While my initial focus was on <strong>ReactJS</strong>, 
-                                I've quickly adapted and excelled in using <strong>Angular</strong> in my current role.
-                                This experience has fostered my ability to learn new frameworks and technologies efficiently.</p>
+                                <p>I'm <strong>Phuoc Tai</strong>, a passionate <strong>Frontend Engineer</strong> with <strong>{YOE} years</strong> of experience building modern web applications. While my initial focus was on <strong>ReactJS</strong>, I've quickly adapted and excelled in using <strong>Angular</strong> in my current role.</p>
+                                
+                                <p>This experience has fostered my ability to learn new <strong>frameworks</strong> and <strong>technologies</strong> efficiently, always staying up-to-date with the latest industry trends and best practices.</p>
                             </div>
                             <ul className={styles.aboutEdu}>
                                 <h4 className={styles.aboutChildTitle}>Education</h4>
                                 {EDU.map(edu => (
                                     <li key={edu.name}>
-                                        <p className='opacity-50'>{edu.start} - {edu.end}</p>
-                                        <p className={styles.eduInfo}>{edu.name} - {edu.uni}</p>
+                                        <p className={styles.eduYear}>{edu.start} - {edu.end}</p>
+                                        <p className={styles.eduInfo}>{edu.name}</p>
+                                        <p className={styles.eduUni}>{edu.uni}</p>
                                     </li> 
                                 ))}
                             </ul>
